@@ -1,12 +1,12 @@
 function decoder(code) {
-    let eCode = String(code)
+    let safeCode = String(code)
     let decodedWord = ""
 
-    for (let i = 0; i < eCode.length; i++) {
-        if (isNaN(eCode[i]) === false) {
-            i += Number(eCode[i])
+    for (let i = 0; i < safeCode.length; i++) {
+        if (isNaN(safeCode[i]) === false) {
+            i += Number(safeCode[i])
         } else {
-            decodedWord += eCode[i]
+            decodedWord += safeCode[i]
         }
     }
 
